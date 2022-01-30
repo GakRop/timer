@@ -7,8 +7,18 @@
     <script src = "index.js"></script>
 </head>
 <body>
-<input type="number" placeholder="Hour" id="hour">:<input type="number" placeholder="Minute" id="minute">:<input type="number" placeholder="Second" id="second">
-<button type="button" onclick="input();">Start</button>
-<div id = "remainingTime"></div>
+<div class = "content">
+    <div class = "input">
+        <input type="number" placeholder="Hour" id="hour">
+        <input type="number" placeholder="Min" id="minute">
+        <input type="number" placeholder="Sec" id="second">
+    </div>
+
+    <div class = "start">
+        <button type="button" onclick="input();">▷</button>
+    </div>
+
+    <div class = "remainingTime" id = "remainingTime">00:00:00</div>
+</div>
 </body>
 </html>

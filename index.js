@@ -95,10 +95,15 @@ function timer(remainingTime){
         console.log(h + ":" + m + ":" + s);
         document.getElementById("remainingTime").innerHTML = h + ":" + m + ":" + s;
 
+        const timeoutAudio = document.getElementById("timeout_audio");
+        timeoutAudio.src = "http://soundbible.com/grab.php?id=1252&type=mp3";
+        timeoutAudio.load();
+
         if (remainingTime < 0) {
             document.getElementById("remainingTime").innerHTML = h + ":" + m + ":" + s;
             clearInterval(timer);
-            window.alert("Time Up!!")
+            timeoutAudio.play();
+            //window.alert("Time Up!!");
         }
     }, 1000);
 }
